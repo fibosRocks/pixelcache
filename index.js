@@ -25,14 +25,20 @@ var newRows = [];
 var nextKey = 0;
 
 app.use(compression());
-app.get('/', (req, res) => {
+app.get('/get_table_rows', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.json({ rows: rows });
 });
 
+app.get('/refresh', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.end("refreshing");
+    loop();
+});
+
 // progress
-loop();
-//setInterval(loop, 1000 * 60 * 2);
+//loop();
+setInterval(loop, 1000 * 10);
 // functions
 
 /**
@@ -50,7 +56,7 @@ function loop() {
         newRows = [];
         nextKey = 0;
         console.log("get pixels alive");
-        setTimeout(loop, 3000);
+        //setTimeout(loop, 3000);
     }).catch(e => {
         console.error(e);
         setTimeout(loop, 1000);
