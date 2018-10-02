@@ -11,7 +11,8 @@ var compression = require('compression')
 }); */
 
 const httpEndPoints = [
-    "http://api.fibos.rocks"
+    /* "http://api.fibos.rocks" */
+    "http://127.0.0.1:10201"
 ];
 const port = 5002;
 
