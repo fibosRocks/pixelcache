@@ -50,7 +50,7 @@ function loop() {
         newRows = [];
         nextKey = 0;
         console.log("get pixels alive");
-        setTimeout(loop, 1000);
+        setTimeout(loop, 3000);
     }).catch(e => {
         console.error(e);
         setTimeout(loop, 1000);
