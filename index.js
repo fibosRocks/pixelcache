@@ -12,7 +12,7 @@ var compression = require('compression')
 
 const httpEndPoints = [
     /* "http://api.fibos.rocks" */
-    "http://127.0.0.1:10201"
+    "http://127.0.0.1:8888"
 ];
 const port = 5002;
 
@@ -91,7 +91,7 @@ function getOnce() {
             .timeout(5000)
             .send({
                 "json": true,
-                "code": "fibospixeloo",
+                "code": "pixelsmaster",
                 "scope": "0",
                 "table": "pixels",
                 "lower_bound": nextKey,
